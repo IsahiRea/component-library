@@ -1,11 +1,14 @@
 import Menu from './components/Menu';
 import Star from './components/Star';
+import Badge from './components/Badge/Badge';
+import Banner from './components/Banner/Banner';
 
 function App() {
 
   return (
     <>
-      <h1>Your components go here</h1>
+      <Badge>Nice</Badge>
+      <Banner type="multi" notify="error">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</Banner>
     </>
   )
 }
