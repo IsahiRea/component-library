@@ -1,0 +1,86 @@
+.banner {
+    padding: 10px;
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+}
+
+.banner h1,
+.banner p {
+    margin: 0;
+}
+
+.banner h1 {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+}
+
+.banner p {
+    margin-top: 7px;
+}
+
+/* Variants */
+.banner-single {
+    align-items: center;
+}
+
+.banner-multi {
+    align-items: start;
+}
+
+/* Status - Success */
+.banner-success {
+    color: var(--color-success-600);
+    background-color: var(--color-success-50);
+}
+
+.banner-icon-success {
+    color: var(--color-success-200);
+}
+
+.banner-heading-success {
+    color: var(--color-success-700);
+}
+
+/* Status - Warning */
+.banner-warning {
+    color: var(--color-warning-400);
+    background-color: var(--color-warning-50);
+}
+
+.banner-icon-warning {
+    color: var(--color-warning-400);
+}
+
+.banner-heading-warning {
+    color: var(--color-warning-700);
+}
+
+/* Status - Error */
+.banner-error {
+    color: var(--color-danger-400);
+    background-color: var(--color-danger-50);
+}
+
+.banner-icon-error {
+    color: var(--color-danger-400);
+}
+
+.banner-heading-error {
+    color: var(--color-warning-700);
+}
+
+/* Status - Neutral */
+.banner-neutral {
+    color: var(--color-info-600);
+    background-color: var(--color-info-50);
+}
+
+.banner-icon-neutral {
+    color: var(--color-info-400);
+}
+
+.banner-heading-neutral {
+    color: var(--color-info-600);
+}

@@ -1,0 +1,27 @@
+.star-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star-button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.star {
+    height: 30px;
+    width: 30px;
+    transition: color var(--transition-slow);
+    user-select: none;
+    color: var(--color-white);
+}
+
+.star.filled {
+    color: var(--color-star);
+}

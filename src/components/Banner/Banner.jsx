@@ -1,4 +1,5 @@
 import React from 'react'
+import './Banner.css'
 import { FaCheckCircle } from "react-icons/fa"
 import { IoIosWarning } from "react-icons/io"
 import { FaCircleXmark } from "react-icons/fa6"

@@ -1,0 +1,65 @@
+.button {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-600);
+    border: 1px solid var(--color-gray-500);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+    padding: 9px 17px;
+    border-radius: var(--radius-md);
+    line-height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.button:hover {
+    background-color: var(--color-gray-300);
+}
+
+/* Sizes */
+.button-sm {
+    padding: 7px 11px;
+    font-size: var(--font-size-xs);
+}
+
+.button-lg {
+    padding: 13px 25px;
+}
+
+/* Variants */
+.button-success {
+    color: var(--color-success-600);
+    background-color: var(--color-success-50);
+    border-color: var(--color-success-600);
+}
+
+.button-success:hover {
+    background-color: var(--color-success-100);
+}
+
+.button-warning {
+    color: var(--color-warning-400);
+    background-color: var(--color-warning-50);
+    border-color: var(--color-warning-400);
+}
+
+.button-warning:hover {
+    background-color: var(--color-warning-100);
+}
+
+.button-danger {
+    color: var(--color-danger-400);
+    background-color: var(--color-danger-50);
+    border-color: var(--color-danger-400);
+}
+
+.button-danger:hover {
+    background-color: var(--color-danger-100);
+}

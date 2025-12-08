@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import './Badge.css'
 
 const Badge = React.forwardRef(function Badge({ children, className, type, color, ...rest }, ref) {
     const allClasses = classnames(

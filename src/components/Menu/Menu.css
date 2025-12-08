@@ -1,0 +1,48 @@
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background-color: var(--color-white);
+}
+
+.menu-dropdown {
+    position: absolute;
+    left: 0;
+    margin-top: 3px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-400);
+    border-radius: var(--radius-md);
+    z-index: 10;
+}
+
+.menu-item {
+    color: var(--color-gray-600);
+    padding: 0.75rem;
+    cursor: pointer;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    transition: background-color var(--transition-fast);
+}
+
+.menu-item:hover,
+.menu-item:focus {
+    background-color: var(--color-gray-50);
+    outline: none;
+}
+
+.menu-item:first-child {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.menu-item:last-child {
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.menu-item:not(:last-child) {
+    border-bottom: 1px solid var(--color-gray-500);
+}

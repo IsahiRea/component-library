@@ -1,4 +1,5 @@
 import React from "react"
+import './Menu.css'
 
 const MenuContext = React.createContext()
 export { MenuContext }

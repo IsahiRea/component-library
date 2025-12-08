@@ -1,4 +1,5 @@
 import React from "react"
+import './Star.css'
 import { BsStar, BsStarFill } from "react-icons/bs"
 
 const Star = React.forwardRef(function Star({ starred, defaultStarred = false, onToggle, ...rest }, ref) {
