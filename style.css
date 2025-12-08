@@ -3,22 +3,114 @@
 }
 
 body {
-    height: 100vh;
     margin: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    font-family: Inter;
-    background-color: grey;
+    padding: 0;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    background-color: #1a1a2e;
+    color: #e5e5e5;
+    min-height: 100vh;
 }
 
 #root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Showcase Layout */
+.showcase {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.showcase-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.showcase-header p {
+    color: #a0a0a0;
+    margin: 0;
+}
+
+.component-section {
+    background-color: #16213e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #1f3460;
+}
+
+.component-section h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.component-section p {
+    font-size: 0.875rem;
+    color: #a0a0a0;
+    margin: 0 0 1.5rem 0;
+}
+
+.component-preview {
+    background-color: #0f0f23;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+}
+
+.component-preview.column {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.component-preview.dark-bg {
+    background-color: #4a5568;
+}
+
+.variant-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.variant-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+    #root {
+        padding: 3rem 2rem;
+    }
+
+    .showcase-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .component-section {
+        padding: 2rem;
+    }
+
+    .component-preview {
+        padding: 3rem;
+    }
 }
 
 /* PRE */

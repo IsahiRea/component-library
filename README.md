@@ -2,9 +2,7 @@
 
 A collection of reusable React components built with Vite.
 
-![Components Overview](./screenshots/components-overview.png)
-
-![Components Interactive](./screenshots/components-interactive.png)
+![Showcase](./screenshots/showcase-full.png)
 
 ## Installation
 
