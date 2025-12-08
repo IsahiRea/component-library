@@ -1,18 +1,19 @@
-import React from 'react';
-import { HiOutlineCloudUpload } from "react-icons/hi";
+import React from 'react'
 
-export default function Card({children}) {
-
+const Card = React.forwardRef(function Card({ children, icon: Icon, title, ...rest }, ref) {
     return (
-        <div className="card">
-            <div className="card-brand">
-                <HiOutlineCloudUpload className='card-icon'/>
-            </div>
+        <div ref={ref} className="card" {...rest}>
+            {Icon && (
+                <div className="card-brand">
+                    <Icon className="card-icon" />
+                </div>
+            )}
             <div>
-                <h1 className='card-header'>Easy Deployment</h1>
-                <p className='card-body'>{children}</p>
+                {title && <h1 className="card-header">{title}</h1>}
+                <p className="card-body">{children}</p>
             </div>
         </div>
-    );
-    
-}
+    )
+})
+
+export default Card

@@ -1,8 +1,7 @@
-import React from 'react';
-import classnames from 'classnames';
+import React from 'react'
+import classnames from 'classnames'
 
-export default function Badge({children, className, type, color, ...props}) {
-  
+const Badge = React.forwardRef(function Badge({ children, className, type, color, ...rest }, ref) {
     const allClasses = classnames(
         'badge',
         {
@@ -10,11 +9,13 @@ export default function Badge({children, className, type, color, ...props}) {
             [`badge-${color}`]: color,
         },
         className
-    );  
+    )
 
-  return (
-    <div className={allClasses} {...props}>
-      {children}
-    </div>
-  );
-}
+    return (
+        <div ref={ref} className={allClasses} {...rest}>
+            {children}
+        </div>
+    )
+})
+
+export default Badge

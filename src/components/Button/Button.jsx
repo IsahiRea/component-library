@@ -1,14 +1,16 @@
 import React from "react"
 import classnames from "classnames"
 
-export default function Button({ children, className, size, variant, ...rest }) {
-    let sizeClass = size && `button-${size}`
-    let variantClass = variant && `button-${variant}`
+const Button = React.forwardRef(function Button({ children, className, size, variant, ...rest }, ref) {
+    const sizeClass = size && `button-${size}`
+    const variantClass = variant && `button-${variant}`
     const allClasses = classnames(sizeClass, variantClass, className)
 
     return (
-        <button className={allClasses} {...rest}>
+        <button ref={ref} className={allClasses} {...rest}>
             {children}
         </button>
     )
-}
+})
+
+export default Button

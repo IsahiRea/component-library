@@ -2,9 +2,20 @@ import React from "react"
 import Button from "../Button/Button"
 import { MenuContext } from "./Menu"
 
-export default function MenuButton({ children }) {
-    const { toggleOpen } = React.useContext(MenuContext)
+const MenuButton = React.forwardRef(function MenuButton({ children, ...rest }, ref) {
+    const { open, toggleOpen } = React.useContext(MenuContext)
+
     return (
-        <Button onClick={toggleOpen}>{children}</Button>
+        <Button
+            ref={ref}
+            onClick={toggleOpen}
+            aria-expanded={open}
+            aria-haspopup="menu"
+            {...rest}
+        >
+            {children}
+        </Button>
     )
-}
+})
+
+export default MenuButton

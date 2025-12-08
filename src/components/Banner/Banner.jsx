@@ -1,38 +1,41 @@
-import React from 'react';
-import { FaCheckCircle } from "react-icons/fa";
-import { IoIosWarning } from "react-icons/io";
-import { FaCircleXmark } from "react-icons/fa6";
-import { HiMiniInformationCircle } from "react-icons/hi2";
+import React from 'react'
+import { FaCheckCircle } from "react-icons/fa"
+import { IoIosWarning } from "react-icons/io"
+import { FaCircleXmark } from "react-icons/fa6"
+import { HiMiniInformationCircle } from "react-icons/hi2"
 
-export default function Banner({children, notify, type}) {
-    
-    const headlineMap = {
-        success: 'Congratulations',
-        error: 'There is a problem with your application',
-        warning: 'Attention',
-        neutral: 'Update available'
-    };
-    
-    const iconMap = {
-        success: <FaCheckCircle className="banner-icon-success" />,
-        error: <FaCircleXmark className="banner-icon-error" />,
-        warning: <IoIosWarning className="banner-icon-warning" />,
-        neutral: <HiMiniInformationCircle className="banner-icon-neutral" />
-    };
+const headlineMap = {
+    success: 'Congratulations',
+    error: 'There is a problem with your application',
+    warning: 'Attention',
+    neutral: 'Update available'
+}
 
-    const headline = headlineMap[notify] || '';
-    const icon = iconMap[notify] || null;
+const iconMap = {
+    success: FaCheckCircle,
+    error: FaCircleXmark,
+    warning: IoIosWarning,
+    neutral: HiMiniInformationCircle
+}
+
+const Banner = React.forwardRef(function Banner({ children, status, variant = 'single', ...rest }, ref) {
+    const headline = headlineMap[status] || ''
+    const Icon = iconMap[status]
 
     return (
-        <div className={`banner banner-${notify} banner-${type}`}>
-            {icon}
-            {type === 'single' && <h1 className={`banner-heading-${notify}`}>{headline}</h1>}
-            {type === 'multi' && (
+        <div ref={ref} className={`banner banner-${status} banner-${variant}`} role="alert" {...rest}>
+            {Icon && <Icon className={`banner-icon-${status}`} />}
+            {variant === 'single' && (
+                <h1 className={`banner-heading-${status}`}>{headline}</h1>
+            )}
+            {variant === 'multi' && (
                 <div>
-                    <h1 className={`banner-heading-${notify}`}>{headline}</h1>
+                    <h1 className={`banner-heading-${status}`}>{headline}</h1>
                     <p>{children}</p>
                 </div>
             )}
         </div>
-    );
-}
+    )
+})
+
+export default Banner
